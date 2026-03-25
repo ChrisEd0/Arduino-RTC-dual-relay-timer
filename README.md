@@ -52,35 +52,21 @@ horaFin → System stop hour
 tiempoEspera → Cycle interval (minutes)
 tiempoCarga → Relay 1 ON time (minutes)
 tiempoHumo → Relay 2 activation time before shutdown (seconds)
-🔁 Operation Logic
 
-Example configuration:
-
-Cycle interval: 15 minutes
-Relay 1 ON time: 10 minutes
-Relay 2 pre-trigger: 10 seconds
-
-Cycle behavior:
-
-[ Relay 1 ON (10 min) ]
-        ↓
-[ Relay 2 ON (last 10s) ]
-        ↓
-[ OFF until next cycle ]
-        ↓
-Repeat...
 🚀 Usage
 Upload the RTC Setup Mode firmware
 Open Serial Monitor
 Send current date and time
 Upload the Operation Mode firmware
 System runs automatically
+
 🔌 Hardware
 Arduino Nano
 DS3231 RTC module
 Opto-isolated relay driver
 Transistor (2N2222A)
 Flyback diode (1N4148 or 1N4007)
+
 ⚡ Circuit Notes
 Relays are driven using a transistor (2N2222A)
 Optocoupler provides electrical isolation
@@ -88,23 +74,12 @@ Flyback diode protects against voltage spikes
 Pull-down resistor ensures stable OFF state
 📷 Project Images
 
-(Add photos of your hardware here)
-
-📊 Timing Diagram
-Time →
-|---- Relay 1 ON ----|-- OFF --|
-                |-- Relay 2 --|
-🧪 Applications
-Smoke machines
-Industrial cyclic processes
-Automation systems
-Timed control of loads
-DIY control modules
 ⚠️ Important Notes
 RTC keeps time using backup battery
 No need to reset time unless battery is removed
 Ensure correct time before operation
 Verify relay ratings for your load (especially AC)
+
 📦 Future Improvements
 Serial configuration in operation mode
 EEPROM parameter storage
