@@ -66,6 +66,9 @@ DS3231 RTC module
 Opto-isolated relay driver
 Transistor (2N2222A)
 Flyback diode (1N4148 or 1N4007)
+![PCB 3D](images/imagen_2026-03-25_164219378.png)
+
+![PCB](images/imagen_2026-03-25_164246888.png)
 
 ⚡ Circuit Notes
 Relays are driven using a transistor (2N2222A)
